@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Keywords" content="Student Registration, Registration">
+    <meta name="description" content="Student Registration System for registering and managing student details.">
+    <meta name="author" content="Praveen Mishra">
+    <title>Registration</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="./output.css" rel="stylesheet">
+
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans leading-normal box-border">
+    <header class="p-6 w-full bg-blue-500 text-white">
+        <div class="container mx-auto">
+            <h1 class="text-2xl sm:text-3xl text-center font-bold">Student Registration System</h1>
+            <p class="mt-2 text-center text-base sm:text-lg">Easily register, edit, and manage student records with this simple interface</p>
+        </div>    
+    </header>
+    <main class="flex flex-col lg:flex-row p-2">
+        <!--Form Section-->
+        <section class="mt-8 p-6 w-full max-w-lg lg:w-1/3 mx-auto bg-white shadow-md rounded-lg">
+            <h2 class="text-2xl font-bold mb-6">Register Student</h2>
+            <form id="studentForm" class="space-y-4">
+                <div>
+                    <label for="studentName" class="block font-semibold text-gray-700">Student Name</label>
+                    <input type="text" id="studentName" name="studentName" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Enter student name" required>
+                    <p class="text-red-500 text-sm mt-1 hidden" id="nameError">Please enter a valid name.</p>
+                </div>
+
+                <div>
+                    <label for="studentId" class="block font-semibold text-gray-700">Student ID</label>
+                    <input type="text" id="studentId" name="studentId" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Enter student ID" required>
+                    <p class="text-red-500 text-sm mt-1 hidden" id="idError">Please enter a valid numeric ID.</p>
+                </div>
+
+                <div>
+                    <label for="email" class="block font-semibold text-gray-700">Email ID</label>
+                    <input type="text" id="email" name="email" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Enter email address" required>
+                    <p class="text-red-500 text-sm mt-1 hidden" id="emailError">Please enter a valid email address.</p>
+                </div>
+
+                <div>
+                    <label for="contactNo" class="block font-semibold text-gray-700">Contact No</label>
+                    <input type="text" id="contactNo" name="contactNo" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Enter contact number" required>
+                    <p class="text-red-500 text-sm mt-1 hidden" id="contactError">Please enter a valid contact number.</p>
+                </div>
+
+                <div class="mt-4">
+                    <button type="submit" id="addBttn" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add</button>
+                </div>
+            </form>
+        </section>
+
+        <!--Display Section-->
+        <section class="mt-8 p-6 w-full max-w-4xl mx-auto bg-white shadow-md rounded-lg">
+            <h2 class="text-2xl font-bold mb-4">Registered Students</h2>
+            <div class="overflow-y-auto max-h-64">
+                <table class="w-full text-left table-auto border-collapse">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="p-3 text-center">Student Name</th>
+                            <th class="p-3 text-center">Student ID</th>
+                            <th class="p-3 text-center">Email ID</th>
+                            <th class="p-3 text-center">Contact No</th>
+                            <th class="p-3 text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody">
+                        <!-- Dynamic Student Records -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

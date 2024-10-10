@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+form input,
+form button {
+  @apply transition-all ease-in-out;
+}
+
+form input:focus {
+  @apply ring-2 ring-blue-500 outline-none;
+}
